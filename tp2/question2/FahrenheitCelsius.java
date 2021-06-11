@@ -4,8 +4,8 @@ package question2;
 /**
  * Décrivez votre classe FahrenheitCelsius ici.
  * 
- * @author (votre nom) 
- * @version (un numéro de version ou une date)
+ * @author Pierre Abi Chedid 
+ * @version 10-6-20
  */
 public class FahrenheitCelsius{
 
@@ -30,9 +30,9 @@ public class FahrenheitCelsius{
       *   @return  la conversion en degré Celsius
       */
      public static float fahrenheitEnCelsius( int f){
-       // ...
-       return 0.F;	// à compléter	en remplaçant la valeur retournée par la fonction de conversion
-       // ...
+         
+       float c = (float)((f - 32)*5)/9;
+       return c;   
      }
 
 }
