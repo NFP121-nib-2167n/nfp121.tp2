@@ -16,13 +16,17 @@ public class FahrenheitCelsius {
      *            ...
      */
     public static void main(String[] args) {
-        // pour tous les paramètres de la ligne de commande
+        
         int fahrenheit = 0;
         float celsius = 0;
-        System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
-                                                                                // format
-                                                                                // imposés
-                                                                                
+        for(String s : args){
+            
+            fahrenheit = Integer.parseInt(s);
+            celsius= fahrenheitEnCelsius(fahrenheit);
+            System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); 
+
+        }
+                                                                                        
     }
 
     /**
@@ -35,6 +39,7 @@ public class FahrenheitCelsius {
     public static float fahrenheitEnCelsius(int f) {
         
         float c = (float)((f - 32)*5)/9;
+        c = (float) Math.floor(c * 10) / 10;
         return c;
     }
 
